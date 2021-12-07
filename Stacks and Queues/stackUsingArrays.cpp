@@ -152,7 +152,7 @@ int main()
         cout << "Press Enter to ";
         option == 6 ? cout << "exit..." : cout << "continue...";
         cin.get();
-        cout << "\n";
+        cout << "\n\n";
     }
     return 0;
 }
