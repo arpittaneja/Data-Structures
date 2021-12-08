@@ -52,14 +52,7 @@ public:
                 return;
             }
 
-            if (rear == size - 1)
-            {
-                rear = 0;
-                q[rear] = ele;
-                return;
-            }
-
-            rear++;
+            rear = (rear + 1) % size;
             q[rear] = ele;
         }
     }
@@ -79,15 +72,8 @@ public:
             return;
         }
 
-        if (front == size - 1)
-        {
-            cout << "The element dequeued is " << q[front] << "\n";
-            front = 0;
-            return;
-        }
-
         cout << "The element dequeued is " << q[front] << "\n";
-        front++;
+        front = (front + 1) % size;
     }
 
     void display()
