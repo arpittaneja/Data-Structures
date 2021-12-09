@@ -17,7 +17,7 @@ public:
 
     bool isEmpty()
     {
-        if (top < 0)
+        if (top == -1)
         {
             return true;
         }

@@ -40,6 +40,7 @@ public:
         }
         return false;
     }
+    
     void push(int val)
     {
         Node *temp = new Node(val);
