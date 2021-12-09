@@ -44,7 +44,7 @@ public:
 
         if (isFull())
         {
-            cout << "Cannot enqueue to an empty queue.\n";
+            cout << "Cannot enqueue to an full queue.\n";
             return;
         }
 
@@ -68,7 +68,7 @@ public:
 
         if (isFull())
         {
-            cout << "Cannot enqueue to an empty queue.\n";
+            cout << "Cannot enqueue to an full queue.\n";
             return;
         }
 
@@ -93,11 +93,12 @@ public:
         if (rear == front)
         {
             cout << "The dequeued element is " << q[front] << ".\n";
+            front = rear = -1;
             return;
         }
 
-        front++;
         cout << "The dequeued element is " << q[front] << ".\n";
+        front++;
     }
 
     void dequeueFromRear()
@@ -111,11 +112,12 @@ public:
         if (rear == front)
         {
             cout << "The dequeued element is " << q[front] << ".\n";
+            front = rear = -1;
             return;
         }
 
-        rear--;
         cout << "The dequeued element is " << q[rear] << ".\n";
+        rear--;
     }
 
     void display()
@@ -206,3 +208,4 @@ int main()
         cout << "\n\n";
     }
     return 0;
+}
